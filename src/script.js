@@ -24,3 +24,11 @@ const scene = new THREE.Scene()
 // Geometry
 const waterGeometry = new THREE.PlaneGeometry(2, 2, 512, 512)
 
+
+// Colors
+debugObject.depthColor = '#186691'
+debugObject.surfaceColor = '#9bd8ff'
+
+gui.addColor(debugObject, 'depthColor').onChange(() => { waterMaterial.uniforms.uDepthColor.value.set(debugObject.depthColor) })
+gui.addColor(debugObject, 'surfaceColor').onChange(() => { waterMaterial.uniforms.uSurfaceColor.value.set(debugObject.surfaceColor) })
+
