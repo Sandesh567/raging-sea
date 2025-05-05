@@ -74,6 +74,11 @@ gui.add(waterMaterial.uniforms.uColorOffset, 'value').min(0).max(1).step(0.001).
 gui.add(waterMaterial.uniforms.uColorMultiplier, 'value').min(0).max(10).step(0.001).name('uColorMultiplier')
 
 
+// Mesh
+const water = new THREE.Mesh(waterGeometry, waterMaterial)
+water.rotation.x = - Math.PI * 0.5
+scene.add(water)
+
 /**
  * Sizes
  */
